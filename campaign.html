@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>龙舟竞渡</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1051790_4pj0w53wwt6.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/download.css" />
+    <link rel="stylesheet" href="./css/campaign.css">
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1109625_kfvolpcyjyr.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/vue-router.js"></script>
+    <script src="./js/echarts.min.js"></script>
+    <script src="//at.alicdn.com/t/font_1109625_kfvolpcyjyr.js"></script>
+  </head>
+  <body>
+    <header class="layout">
+      <div class="navbar">
+        <a class="logo" href="#"
+          ><img src="./imgs/images/首页_03.gif" alt=""
+        /></a>
+        <ul class="nav">
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./download.html">下载</a></li>
+          <li><a href="./help.html">帮助</a></li>
+          <li><a href="./campaign.html">应用</a></li>
+          <li><a href="#" class="index-login">登录</a></li>
+        </ul>
+        <div id="btn">
+          <span class="iconfont icon-Shape"></span>
+        </div>
+      </div>
+
+
+
+      <div class="campaign">
+        <div id="app">
+          <div class="app-wrap">
+            <div class="move-menu">
+              <div id="open-menu"><a href="#" id='open-menu1'>菜单</a></div>
+              <span class="iconfont icon--you"></span>
+            </div>
+            <div class="view-wrap">
+              <!-- <div style="width:90%;height:100%;padding:10px;"> -->
+              <component :is="componentIds"></component>
+              <!-- </div> -->
+            </div>
+            <ul class="menu-wrap">
+              <li>
+                <span class="iconfont icon-line"></span>
+                <a @click="componentIds=tabId[0]">用户统计</a>
+                <span class="iconfont icon--you"></span>
+              </li>
+              <li>
+                <span class="iconfont icon-rukuguanli"></span>
+                <a @click="componentIds=tabId[1]">公众号</a>
+                <span class="iconfont icon--you"></span>
+              </li>
+              <li>
+                <span class="iconfont icon-yundanguanli"></span>
+                <a @click="componentIds=tabId[2]">文章</a>
+                <span class="iconfont icon--you"></span>
+              </li>
+            </ul>
+            <ul class="movemenu-wrap">
+                    <li>
+                      <span class="iconfont icon-line"></span>
+                      <a class="mobe-btn" @click="componentIds=tabId[0]">用户统计</a>
+                      <span class="iconfont icon--you"></span>
+                    </li>
+                    <li>
+                      <span class="iconfont icon-rukuguanli"></span>
+                      <a class="mobe-btn1" @click="componentIds=tabId[1]">公众号</a>
+                      <span class="iconfont icon--you"></span>
+                    </li>
+                    <li>
+                      <span class="iconfont icon-yundanguanli"></span>
+                      <a class="mobe-btn2" @click="componentIds=tabId[2]">文章</a>
+                      <span class="iconfont icon--you"></span>
+                    </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="shade"></div>
+      <div class="menu-container">
+        <div class="menu-content">
+          <span class="menu-close iconfont icon-guanbi"></span>
+          <ul class="menu-list">
+            <li>
+              <a href="./index.html">首页</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./download.html">下载</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./help.html">帮助</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./campaign.html">应用</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+          </ul>
+          <div class="login-container">
+            <div class="loginer">登录</div>
+            <div class="register">注册</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-modal login">
+        <div class="modal modal-login">
+          <a class="close" href="#"><i class="fa fa-close"></i></a>
+          <div class="tabs">
+            <a class="login active" href="#">登录</a>
+            <a class="register" href="#">注册</a>
+          </div>
+          <div class="content">
+            <div class="errormsg"></div>
+            <form action="/login" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="用户名" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="密码" />
+              </div>
+              <div class="input-field">
+                <input type="submit" value="登录" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-register">
+          <a class="close fa fa-close" href="#"></a>
+          <div class="tabs">
+            <a class="login" href="#">登录</a>
+            <a class="register active" href="#">注册</a>
+          </div>
+          <div class="content">
+            <div class="errormsg"></div>
+            <form action="/register" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="输入用户名" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="输入密码" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input
+                  name="password2"
+                  type="password"
+                  placeholder="再次输入密码"
+                />
+              </div>
+              <div class="input-field">
+                <input type="submit" value="注册" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <footer class="layout">
+      <div class="foot-mes">
+        <div class="footwrap">
+          <ul>
+            <li>
+              <div class="logo"><img src="./imgs/帮助_003.gif" alt="" /></div>
+            </li>
+            <li>关于我们</li>
+            <li>加入我们</li>
+            <li>联系我们</li>
+          </ul>
+        </div>
+        <div class="contact-way">
+          <p>Copyright © Your Website 2019</p>
+          <p>邮箱：12727813@firefox.com</p>
+        </div>
+      </div>
+      <div class="qrcode"><img src="./imgs/帮助_004.gif" alt="" /></div>
+    </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/campaign.js"></script>
+    <script src="./js/customed.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+      // 基于准备好的dom，初始化echarts实例
+      var myChart = echarts.init(
+        document.getElementById("chartmain"),
+        "customed"
+      );
+
+      // 指定图表的配置项和数据
+      var option = {
+        tooltip: {},
+        legend: {
+          data: ["参赛", "邀约", "审核通过人数"]
+        },
+        xAxis: {
+          data: [
+            "18~24周岁",
+            "25~30周岁",
+            "31~35周岁",
+            "36~40周岁",
+            "41~45周岁",
+            "46周岁以上"
+          ]
+        },
+        yAxis: {},
+        series: [
+          {
+            name: "参赛",
+            type: "bar",
+            data: [45, 30, 36, 20, 26, 5]
+          },
+          {
+            name: "邀约",
+            type: "bar",
+            data: [15, 30, 26, 40, 35, 15]
+          },
+          {
+            name: "审核通过人数",
+            type: "line",
+            data: [5, 20, 36, 10, 10, 20]
+          }
+        ]
+      };
+
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option, true);
+      myChart.clear();
+      myChart.setOption(option, true);
+    </script>
+  </body>
+</html>

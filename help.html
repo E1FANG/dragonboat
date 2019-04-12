@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>龙舟竞渡</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1051790_4pj0w53wwt6.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/download.css" />
+    <link
+      rel="stylesheet"
+      href="://at.alicdn.com/t/font_1109625_58piffaoyx.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./js/vue.min.js"></script>
+    <script src="./js/vue-router.js"></script>
+    <script src="//at.alicdn.com/t/font_1109625_u40oju86ydn.js"></script>
+  </head>
+  <body>
+    <header class="layout">
+      <div class="navbar">
+        <a class="logo" href="#"
+          ><img src="./imgs/images/首页_03.gif" alt=""
+        /></a>
+        <ul class="nav">
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./download.html">下载</a></li>
+          <li><a href="./help.html">帮助</a></li>
+          <li><a href="./campaign.html">应用</a></li>
+          <li><a href="#" class="index-login">登录</a></li>
+        </ul>
+        <div id="btn">
+          <span class="iconfont icon-Shape"></span>
+        </div>
+      </div>
+
+
+
+
+      <div class="help">
+        <div id="app">
+          <div class="app-wrap">
+            <ul class="menu-wrap">
+              <li>
+                <span class="iconfont icon-line"></span>
+                <router-link to="/foo">主页</router-link>
+                <span class="iconfont icon--you"></span>
+              </li>
+              <li>
+                <span class="iconfont icon-rukuguanli"></span>
+                <router-link to="/bar">入门</router-link>
+                <span class="iconfont icon--you"></span>
+              </li>
+              <li>
+                <span class="iconfont icon-yundanguanli"></span>
+                <router-link to="/tile">比赛</router-link>
+                <span class="iconfont icon--you"></span>
+              </li>
+              <li>
+                <span class="iconfont icon-jiaoseguanli"></span>
+                <router-link to="/file">社交</router-link>
+                <span class="iconfont icon--you"></span>
+              </li>
+              <li>
+                  <span class="iconfont icon-jigouguanli"></span>
+                  <router-link to="/hile">链接</router-link>
+                  <span class="iconfont icon--you"></span>
+                </li>
+            </ul>
+            <div class="view-wrap">
+              <router-view></router-view>
+            </div>
+          </div>
+        </div>
+        <div class="content"></div>
+      </div>
+
+
+
+
+
+      <div class="shade"></div>
+      <div class="menu-container">
+        <div class="menu-content">
+          <span class="menu-close iconfont icon-guanbi"></span>
+          <ul class="menu-list">
+            <li>
+              <a href="./index.html">首页</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./download.html">下载</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./help.html">帮助</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./campaign.html">应用</a
+              ><span class="iconfont icon--you"></span>
+            </li>
+          </ul>
+          <div class="login-container">
+            <div class="loginer">登录</div>
+            <div class="register">注册</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-modal login">
+        <div class="modal modal-login">
+          <a class="close" href="#"><i class="fa fa-close"></i></a>
+          <div class="tabs">
+            <a class="login active" href="#">登录</a>
+            <a class="register" href="#">注册</a>
+          </div>
+          <div class="content">
+            <div class="errormsg"></div>
+            <form action="/login" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="用户名" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="密码" />
+              </div>
+              <div class="input-field">
+                <input type="submit" value="登录" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-register">
+          <a class="close fa fa-close" href="#"></a>
+          <div class="tabs">
+            <a class="login" href="#">登录</a>
+            <a class="register active" href="#">注册</a>
+          </div>
+          <div class="content">
+            <div class="errormsg"></div>
+            <form action="/register" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="输入用户名" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="输入密码" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input
+                  name="password2"
+                  type="password"
+                  placeholder="再次输入密码"
+                />
+              </div>
+              <div class="input-field">
+                <input type="submit" value="注册" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <footer class="layout">
+        <div class="foot-mes">
+          <div class="footwrap">
+            <ul>
+              <li>
+                <div class="logo"><img src="./imgs/帮助_003.gif" alt="" /></div>
+              </li>
+              <li>关于我们</li>
+              <li>加入我们</li>
+              <li>联系我们</li>
+            </ul>
+          </div>
+          <div class="contact-way">
+            <p>Copyright © Your Website 2019</p>
+            <p>邮箱：12727813@firefox.com</p>
+          </div>
+        </div>
+        <div class="qrcode"><img src="./imgs/帮助_004.gif" alt="" /></div>
+      </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/help.js"></script>
+  </body>
+</html>

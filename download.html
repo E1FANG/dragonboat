@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>龙舟竞渡</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1051790_4pj0w53wwt6.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="./css/download.css">
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1109625_58piffaoyx.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header class="layout">
+      <div class="navbar">
+        <a class="logo" href="#"
+          ><img src="./imgs/images/首页_03.gif" alt=""
+        /></a>
+        <ul class="nav">
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./download.html">下载</a></li>
+          <li><a href="./help.html">帮助</a></li>
+          <li><a href="./campaign.html">应用</a></li>
+          <li><a href="#" class="index-login">登录</a></li>
+        </ul>
+        <div id="btn">
+          <span class="iconfont icon-Shape"></span>
+        </div>
+      </div>
+      <div class="pic"></div>
+      <div class="download">
+          <div class="dl-content">
+            <h1>一键查询最近比赛信息</h1>
+            <h1>以及附近喜欢龙舟的好友</h1>
+          <p>
+            龙舟争渡这款App可以帮你网罗最近的龙舟比赛信息，并提供比赛报名以及帮助你邀约附近的人或者好友一起去观看龙舟比赛的功能，不再让你的爱好只是你一个人的爱好，找到属于你的群体
+          </p>
+          </div>
+          <div class="btn-container">
+            <div class="qr-code"><img src="./imgs/二维码.png" alt=""></div>
+              <div class="dl-btn">
+                  <div>
+                      <span class="iconfont icon-iphone"></span>
+                  </div>
+                  <div>
+                      <a>点击下载</a> 
+                      <p>IOS客户端</p>
+                  </div>
+                  
+              </div>
+              <div class="dl-btn">
+                <div>
+                    <span class="iconfont icon-android"></span>
+                </div>
+                <div>
+                    <p>点击下载</p>
+                    <p>Andriod客户端</p>
+                </div>
+                <!-- <div class="qr-code"><img src="./imgs/二维码.png" alt=""></div> -->
+            </div>
+            <div class="dl-btn">
+              <div>
+                  <span class="iconfont icon-windows"></span>
+              </div>
+              <div>
+                  <p>点击下载</p>
+                  <p>Windows PC版</p>
+              </div>
+              <!-- <div class="qr-code"><img src="./imgs/二维码.png" alt=""></div> -->
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="shade"></div>
+      <div class="menu-container">
+        <div class="menu-content">
+          <span class="menu-close iconfont icon-guanbi"></span>
+          <ul class="menu-list">
+            <li>
+              <a href="./index.html">首页</a><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./download.html">下载</a><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./help.html">应用</a><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./campaign.html">推广</a><span class="iconfont icon--you"></span>
+            </li>
+          </ul>
+          <div class="login-container">
+            <div class="loginer">登录</div>
+            <div class="register">注册</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-modal login">
+        <div class="modal modal-login">
+          <a class="close" href="#"><i class="fa fa-close"></i></a>
+          <div class="tabs">
+            <a class="login active" href="#">登录</a>
+            <a class="register" href="#">注册</a>
+          </div>
+          <div class="content">
+            <div class="errormsg"></div>
+            <form action="/login" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="用户名" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="密码" />
+              </div>
+              <div class="input-field">
+                <input type="submit" value="登录" />
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-register">
+          <a class="close fa fa-close" href="#"></a>
+          <div class="tabs">
+            <a class="login" href="#">登录</a>
+            <a class="register active" href="#">注册</a>
+          </div>
+          <div class="content">
+            <div class="errormsg"></div>
+            <form action="/register" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="输入用户名" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="输入密码" />
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input
+                  name="password2"
+                  type="password"
+                  placeholder="再次输入密码"
+                />
+              </div>
+              <div class="input-field">
+                <input type="submit" value="注册" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <footer class="layout">
+        <div class="foot-mes">
+          <div class="footwrap">
+            <ul>
+              <li>
+                <div class="logo"><img src="./imgs/帮助_003.gif" alt="" /></div>
+              </li>
+              <li>关于我们</li>
+              <li>加入我们</li>
+              <li>联系我们</li>
+            </ul>
+          </div>
+          <div class="contact-way">
+            <p>Copyright © Your Website 2019</p>
+            <p>邮箱：12727813@firefox.com</p>
+          </div>
+        </div>
+        <div class="qrcode"><img src="./imgs/帮助_004.gif" alt="" /></div>
+      </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

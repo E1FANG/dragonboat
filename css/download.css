@@ -1,0 +1,266 @@
+header {
+  height: 70%;
+}
+@media (max-width: 430px) {
+  header {
+    height: 100%;
+  }
+}
+.download {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  margin-top: 100px;
+}
+.pic {
+  background: url(../imgs/下载_03.png) no-repeat center center;
+  background-size: 90%;
+  opacity: 1;
+  position: absolute;
+  top: 10%;
+  z-index: 1;
+  width: 50%;
+  height: 70%;
+}
+.download .dl-content {
+  width: 50%;
+  align-self: flex-end;
+}
+@media (max-width: 430px) {
+  .pic {
+    display: none;
+  }
+  .download .dl-content {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+  }
+}
+.download .dl-content p {
+  font-size: 16px;
+  padding-right: 20px;
+}
+.download .btn-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 70%;
+  padding: 0 10px 10px 50px;
+  margin-top: 20px;
+  border-radius: 4px;
+  background: #ffa8a8;
+}
+
+.download .btn-container .dl-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 33%;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background: #fff;
+}
+
+@media (max-width: 430px) {
+  .download .btn-container {
+    width: 100%;
+    /* align-items: center; */
+    margin-top: 60px;
+  }
+  .download .btn-container .dl-btn {
+    width: 50%;
+  }
+}
+
+.download .btn-container .dl-btn span {
+  font-size: 28px;
+  margin-right: 5px;
+}
+.dl-btn a {
+  display: block;
+}
+.qr-code{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -10px;
+  margin-bottom: 12px;
+  /* background: white; */
+  /* padding-top: 20px; */
+}
+.qr-code img{
+  width: 60%;
+  margin: 0 auto;
+  display: none;
+}
+@media(max-width:800px){
+  .qr-code img{display: block;}
+}
+.dl-btn:hover .qr-code{
+  opacity: 1;
+}
+
+/* 这里开始是帮助页面的css这里开始是帮助页面的css这里开始是帮助页面的css这里开始是帮助页面的css这里开始是帮助页面的css这里开始是帮助页面的css */
+.app-wrap {
+  display: flex;
+  justify-content: space-between;
+  background: #910f12;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+.menu-wrap {
+  flex: 1.5;
+  padding: 15px;
+}
+.menu-wrap > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  color: white;
+}
+.menu-wrap > li a {
+  flex: 1;
+  color: white;
+}
+.menu-wrap > li a:hover {
+  /* border-bottom: 1px solid white; */
+  color: #ffa8a8!important;
+}
+.menu-wrap > li span:nth-child(1) {
+  margin-right: 10px;
+}
+.view-wrap {
+  flex: 5;
+  height: 450px;
+  margin: 4px;
+  background: #fff;
+  border-radius: 4px;
+  left: 50px;
+}
+
+.foo-index {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 120px;
+  margin: auto 0;
+  padding: 0;
+}
+.foo-index div{
+  width: calc(33.3% - 20px);
+  text-align: center;
+}
+.foo-index div:last-child{
+  align-self: flex-start;
+}
+.foo-index span svg:hover{
+  font-size: 140px;
+}
+.foo-index p {
+  font-size: 18px;
+  text-align: center;
+  margin-top: -10px;
+}
+@media(max-width:430px){
+  /* header{
+    height: 60%;
+  } */
+  .view-wrap{height: 500px}
+  .foo-index{
+    font-size: 50px;
+    justify-content: flex-start;
+  }
+  .foo-index div{
+    width: calc(50% - 20px);
+    text-align: center;
+    margin-top: 10px;
+    max-height: 100px;
+  }
+  .foo-index div:last-child{
+    align-self: auto;
+    margin-top: 10px;
+  }
+  .foo-index p {
+    font-size: 14px;
+  }
+  .foo-index span svg:hover{
+    font-size: 60px;
+  }
+}
+
+/* 这里开始是数据的css这里开始是数据的css这里开始是数据的css这里开始是数据的css这里开始是数据的css这里开始是数据的css这里开始是数据的css */
+.echartbox{
+  margin-top:30px;
+  width:700px;
+  height: 400px;
+}
+.campaign .move-menu{
+  display: none
+}
+#chartmain{
+  width: 100%;
+  height: 100%;
+}
+.app-wrap{
+  position: relative;
+}
+#open-menu1{
+  color: white;
+}
+.movemenu-wrap{
+  display: flex;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 27px;
+  /* border-radius: 4px; */
+  padding: 0 5px;
+  padding-bottom: 10px;
+  background: #910f12; 
+  color: white;
+  width: 100%;
+  /* border-top:1px solid white; */
+}
+.movemenu-wrap li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.mobe-btn {
+  flex: 1;
+}
+.mobe-btn1 {
+  flex: 1;
+}
+.mobe-btn2 {
+  flex: 1;
+}
+@media(max-width:430px){
+  .campaign .app-wrap{
+    flex-direction: column;
+    position: relative;
+  }
+  .campaign .move-menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding-right: 10px;
+  }
+  .campaign .view-wrap{
+    max-width: 420px;
+  }
+  .campaign .menu-wrap{
+    display: none;
+  }
+  /* #chartmain{
+    width: 410px;
+  } */
+}

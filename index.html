@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>龙舟竞渡</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1051790_4pj0w53wwt6.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css">
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1109625_58piffaoyx.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header class="layout">
+      <div class="navbar">
+        <a class="logo" href="#"
+          ><img src="./imgs/images/首页_03.gif" alt=""
+        /></a>
+        <ul class="nav">
+          <li><a href="./index.html">首页</a></li>
+          <li><a href="./download.html">下载</a></li>
+          <li><a href="./help.html">帮助</a></li>
+          <li><a href="./campaign.html">应用</a></li>
+          <li><a href="#" class="index-login">登录</a></li>
+        </ul>
+        <div id="btn">
+          <span class="iconfont icon-Shape"></span>
+        </div>
+      </div>
+      <div class="intro">
+        <h2>龙舟信息咨询 比赛信息 社交圈子 赛事讨论</h2>
+        <div class="mes">
+          <h2>龙舟信息咨询</h2>
+          <h2>比赛信息</h2>
+          <h2>社交圈子</h2>
+          <!-- <h2>赛事讨论</h2> -->
+        </div>
+        <h1>
+          龙舟争渡这款App可以帮你网罗最近的龙舟比赛信息，并提供比赛报名，以及帮助你邀约
+          附近的人或者好友一起去观看龙舟比赛的功能，不再让你的爱好只是你一个人的爱好，找
+          到属于你的群体
+        </h1>
+        <a class="button" href="./download.html">Download</a>
+      </div>
+      <div class="shade"></div>
+      <div class="menu-container">
+        <div class="menu-content">
+          <span class="menu-close iconfont icon-guanbi"></span>
+          <ul class="menu-list">
+            <li>
+              <a href="./index.html">首页</a><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./download.html">下载</a><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./help.html">帮助</a><span class="iconfont icon--you"></span>
+            </li>
+            <li>
+              <a href="./campaign.html">应用</a><span class="iconfont icon--you"></span>
+            </li>
+          </ul>
+          <div class="login-container">
+            <div class="loginer">登录</div>
+            <div class="register">注册</div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-modal login">
+        <div class="modal modal-login">
+         <a class="close" href="#"><i class="fa fa-close"></i></a>
+         <div class="tabs">
+           <a class="login active" href="#">登录</a>
+           <a class="register" href="#">注册</a>
+         </div>
+         <div class="content">
+          <div class="errormsg"></div>
+          <form action="/login" method="post">
+            <div class="input-field">
+              <i class="fa fa-user-o"></i>
+              <input name="username" type="text" placeholder="用户名">
+            </div>
+            <div class="input-field">
+              <i class="fa fa-lock"></i>
+              <input name="password" type="password" placeholder="密码">
+            </div>   
+            <div class="input-field">
+              <input type="submit" value="登录">
+            </div>            
+          </form>
+         </div>
+        </div>
+        <div class="modal modal-register">
+           <a class="close fa fa-close" href="#"></a>
+           <div class="tabs">
+             <a class="login" href="#">登录</a>
+             <a class="register active" href="#">注册</a>
+           </div>
+           <div class="content">
+            <div class="errormsg"></div>
+            <form action="/register" method="post">
+              <div class="input-field">
+                <i class="fa fa-user-o"></i>
+                <input name="username" type="text" placeholder="输入用户名">
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password" type="password" placeholder="输入密码">
+              </div>
+              <div class="input-field">
+                <i class="fa fa-lock"></i>
+                <input name="password2" type="password" placeholder="再次输入密码">
+              </div> 
+               <div class="input-field">
+                 <input type="submit" value="注册">
+               </div>
+            </form>            
+           </div>          
+        </div>      
+      </div>
+  
+    </header>
+    <main class="layout">
+      <section style="padding-top:20px">
+        <h2>App介绍</h2>
+        <p>关于龙舟竞渡App</p>
+        <ul class="family-intro">
+          <li>
+            <span class="iconfont icon-family1"></span>
+            <h3>赛事咨询</h3>
+            <p>目前具有所有关于龙舟比赛的资源，不限于视频，图文等表现形式</p>
+          </li>
+          <li>
+            <span class="iconfont icon-family2"></span>
+            <h3>好友邀约</h3>
+            <p>
+              帮助你邀约
+              附近的人或者好友一起去观看龙舟比赛的功能，不再让你的爱好只是你一个人的爱好，找
+              到属于你的群体
+            </p>
+          </li>
+          <li>
+            <span class="iconfont icon-family3"></span>
+            <h3>赛事报名</h3>
+            <p>
+              龙舟竞渡App还提供了赛事报名功能，而且十分便捷，只需要四步，你就可以快速报名参加比赛
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h2>精选赛事</h2>
+        <p>这里提供了一些过往较为精彩的赛事</p>
+        <div class="family">
+          <figure>
+            <a href="#">
+              <img src="./imgs/test.jpg" alt="" />
+              <span class="iconfont icon-jiahao"></span>
+            </a>
+            <h2 class="figureHead">2018中华龙舟大赛</h2>
+            <p>海南万宁站</p>
+          </figure>
+          <figure>
+            <a href="#">
+              <img src="./imgs/test1 (1).jpg" alt="" />
+              <span class="iconfont icon-jiahao"></span>
+            </a>
+            <h2 class="figureHead">2017世界名校龙舟大赛</h2>
+            <p>天津海河</p>
+          </figure>
+          <figure>
+            <a href="#">
+              <img src="./imgs/test1 (2).jpg" alt="" />
+              <span class="iconfont icon-jiahao"></span>
+            </a>
+            <h2 class="figureHead">2018中华龙舟大赛</h2>
+            <p>江西潘阳站</p>
+          </figure>
+          <figure>
+            <a href="#">
+              <img src="./imgs/test1 (3).jpg" alt="" />
+              <span class="iconfont icon-jiahao"></span>
+            </a>
+            <h2 class="figureHead">2017中华龙舟大赛</h2>
+            <p>广东惠州站</p>
+          </figure>
+          <figure>
+            <a href="#">
+              <img src="./imgs/test1 (4).jpg" alt="" />
+              <span class="iconfont icon-jiahao"></span>
+            </a>
+            <h2 class="figureHead">2018龙舟联合会世界杯</h2>
+            <p>精英公开100米直道赛决赛</p>
+          </figure>
+          <figure>
+            <a href="#">
+              <img src="./imgs/test1 (5).jpg" alt="" />
+              <span class="iconfont icon-jiahao"></span>
+            </a>
+            <h2 class="figureHead">2016年广东莲花杯</h2>
+            <p>职业女子100米知道赛决赛</p>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <h2>报名流程</h2>
+        <p>这里是报名流程，只需要四个简单步骤就可以报名比赛</p>
+        <ul class="timeline">
+          <li>
+            <img src="./imgs/aiouniya1.jpg" alt="" />
+            <dl>
+              <dt>选择比赛</dt>
+              <dd>选择你想要参加的比赛项目</dd>
+              <dd class="timeLinedd">
+                这个板块囊括了几乎所有的国内比赛，而且还能根据你所在的地区来选择你想要参加的比赛，比赛不仅仅包括专业组，还区分青年组，老年组和女子组
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <img src="./imgs/nuokesasi2.jpg" alt="" />
+            <dl>
+              <dt>比赛详情</dt>
+              <dd>进一步了解比赛项目</dd>
+              <dd class="timeLinedd"></dd>
+                这里有详细的比赛信息，包括主办方，比赛地点，比赛人数，比赛时间，比赛模式和比赛组别。可以让你更了解该比赛项目
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <img src="./imgs/aiouniya3.jpg" alt="" />
+            <dl>
+              <dt>报名</dt>
+              <dd>方便快捷的线上报名方式</dd>
+              <dd class="timeLinedd">
+                在这个版块，你需要填写你的个人信息，包括联系方式和身份证号码以及你想要参加的比赛项目
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <img src="./imgs/nuokesasi4.jpg" alt="" />
+            <dl>
+              <dt>等待审核</dt>
+              <dd>会有专员来审核你所填写的信息</dd>
+              <dd class="timeLinedd">
+                我们的工作人员会在2-3个工作日之内完成对你所填写的信息审核
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <span style="color:white">FINNISH</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- <section id="contact">
+      <div class="center-css">
+        <h2>CONTACT US</h2>
+        <div class="container layout">
+          <form>
+            <div class="contact-form clearfix">
+              <div class="personal">
+                <div class="message">
+                  <input type="text" placeholder="YOUR NAME*" />
+                </div>
+                <div class="message">
+                  <input type="text" placeholder="YOUR EMAIL*" />
+                </div>
+                <div class="message">
+                  <input type="text" placeholder="YOUR PHONE*" />
+                </div>
+              </div>
+              <div class="personal-mes">
+                <textarea placeholder="YOUR MESSAGE*"></textarea>
+              </div>
+            </div>
+            <div>
+              <a class="button" 　href="#">SEND MESSAGE</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section> -->
+    <footer>
+      <div class="foot-mes">
+        <div class="footwrap">
+          <ul>
+            <li>
+              <div class="logo"><img src="./imgs/帮助_003.gif" alt="" /></div>
+            </li>
+            <li>关于我们</li>
+            <li>加入我们</li>
+            <li>联系我们</li>
+          </ul>
+        </div>
+        <div class="contact-way">
+          <p>Copyright © Your Website 2019</p>
+          <p>邮箱：12727813@firefox.com</p>
+        </div>
+      </div>
+      <div class="qrcode"><img src="./imgs/帮助_004.gif" alt="" /></div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+@media(max-width:430px){
+    #chartmain{
+      min-height: 500px;
+    }
+    .foo-index{
+      height: 500px;
+    }
+  }
